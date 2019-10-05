@@ -8,7 +8,8 @@
 
 
 ::selection{
-	background: #947B89;
+	background: #262626;
+	color: white;
 }
 
 .clearfix::after{
