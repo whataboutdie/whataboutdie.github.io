@@ -167,6 +167,10 @@ nav {
 	background: white;
 	border-radius: 20px 20px 0 0;
 }
+
+article{
+	padding: 0 5% 2% 5%;
+}
   
 /****************1 статья******************/
 
@@ -174,7 +178,6 @@ nav {
 	width: 100%;
 	display: block;
 	/*border: 1px solid black;*/
-	padding: 2%;
 }
 
 .article-1 h1{
@@ -280,7 +283,6 @@ nav {
 	display: block;
 	/*border: 1px solid black;*/
 	margin:0;
-	padding: 0 2% 2% 2%;
 }
 
 .article-3 h1{
@@ -322,7 +324,6 @@ nav {
 	display: block;
 	/*border: 1px solid black;*/
 	margin:0;
-	padding: 0 2% 2% 2%;
 }
 
 .article-4 h1{
