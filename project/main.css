@@ -300,7 +300,8 @@ article{
 }
 
 .drop-menu a{
-	display: inline;
+	display: inline-block;
+	text-align:center;
 	font-size: 24px;
 	cursor: pointer;
 	padding: 5px;
@@ -308,6 +309,7 @@ article{
 
 .drop-menu a:hover{
 	color: white;
+
 	background: black;
 	transition: 0.7s;
 	border-radius: 35px;
@@ -320,7 +322,6 @@ article{
 
 .article-4{
 	width: 100%;
-	/*border: 1px solid black;*/
 	margin:0;
 }
 
@@ -458,8 +459,11 @@ article{
 	.block_main{
 		text-align: center; /*логотип по центру*/
 	}
-	.article-1 h1 , .article-2 h1 , .article-3 h1{
+	article h1{
 		text-align: center; /*заголовки по центру*/
+	}
+	article{
+	padding: 0 5% 2% 5%;
 	}
 	.navigation{
 		display: none; /*убирает меню для компов*/
@@ -487,8 +491,6 @@ article{
 	.footer_p_2{
 		display: none;
 	}
-	article{
-	padding: 0 5% 2% 5%;
-	}
+	
 
 }
