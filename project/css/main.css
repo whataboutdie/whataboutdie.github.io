@@ -169,7 +169,7 @@ nav {
 }
 
 article{
-	padding: 0 5% 2% 5%;
+	padding: 0 2% 2% 2%;
 }
   
 /****************1 статья******************/
@@ -194,7 +194,6 @@ article{
 	display: block;
 	/*border: 1px solid black;*/
 	margin:0;
-	padding: 0 2% 2% 2%;
 }
  
 /******************2 статья********************/
@@ -442,7 +441,7 @@ article{
 	}
 }
 
-@media screen and (min-width: 0px ) and (max-width: 600px) {
+@media screen and (min-width: 0px ) and (max-width: 450px) {
 	.wrapper{
 		width: 100%;
 		margin: 0 auto;
@@ -488,6 +487,9 @@ article{
 	}
 	.footer_p_2{
 		display: none;
+	}
+	article{
+	padding: 0 5% 2% 5%;
 	}
 
 }
