@@ -202,5 +202,8 @@ header {
 		.wrapper{
 			height: 65%;
 		}
+		.section a{
+			font-size: 26.25px;
+		}
 	}
 }
