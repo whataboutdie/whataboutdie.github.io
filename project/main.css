@@ -13,7 +13,7 @@
 }
 
 ::selection{
-	background: #947B89;
+	background: #262626;
 	color: white;
 }
 
@@ -95,6 +95,11 @@ body {
 	padding: 0;
 }
 
+.heading span{
+	color: #9EAFAE;
+	font-size: 16px;
+}
+
 .heading_name{
 	font-size: 32px;
 }
@@ -166,6 +171,7 @@ nav {
 	margin: 0 auto;
 	background: white;
 	border-radius: 20px 20px 0 0;
+	line-height: 1.5;
 }
 
 article{
@@ -246,21 +252,29 @@ article{
 }
 
 .first-group a:hover{
+	background:#262626;
+	color: white;
 	border-bottom: 5px solid #60C99C;
 	transition: 0.2s;
 }
 
 .sec-group a:hover{
+	background:#262626;
+	color: white;
 	border-bottom: 5px solid #C9C560;
 	transition: 0.2s;
 }
 
 .thrd-group a:hover{
+	background:#262626;
+	color: white;
 	border-bottom: 5px solid #C96060;
 	transition: 0.2s;
 }
 
 .fr-group a:hover{
+	background:#262626;
+	color: white;
 	border-bottom: 5px solid #9960C9;
 	transition: 0.2s;
 }

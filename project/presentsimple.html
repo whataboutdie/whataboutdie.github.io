@@ -2,13 +2,13 @@
 <html lang="en, ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="About project: contacts, programmers, goals etc.">
+	<meta name="description" content="Present Simple: все об этом времени!">
 	<meta name="author" content="Nicolas">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="presentsimple.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="shortcut icon" href="/project/favicon/favicon.ico">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>Main</title>
+	<title>Present Simple</title>
 	<script>
 		function toggle(el) {
 		el.style.display = (el.style.display == 'none') ? '' : 'none'
@@ -22,7 +22,7 @@
 			<div class="block">
 				<div class="block_main">
 					<a href="index.html">
-						<p class="heading_name">Grammar</p>
+						<p class="heading_name">Grammar <span>[beta]</span></p>
 						<p class="heading_secondname">: learn it easier</p>
 					</a>
 				</div>
@@ -37,7 +37,7 @@
 			<div class="navigation">
 				<div class="menu">
 					<ul class="menu-ul">
-						<li><a href="index.html">main</a></li>
+						<li><a href="main.html">main</a></li>
 						<li><a href="#">tools</a></li>
 						<li><a href="#">contacts</a></li>
 						<li  class="telegram"><a href="#">telegram</a></li>
@@ -46,7 +46,7 @@
 			</div>
 		</nav>
 
-		<div class="psevdonav">
+		<div class="psevdonav"> 	<!--  кнопка меню для моб устройств </!-->
 			<div class="drop-menu_btn">
 				<a onclick="toggle(drop_menu_nav)">menu</a>
 			</div>
@@ -69,21 +69,20 @@
 
 	<main class="wrapper">
 		<article class="article-1">
-			<h1>Добро пожаловать!</h1>
-			<p>(?) - это независимый консультационно-справочный сайт. Наша задача - упростить вам изучение английского языка. Здесь вы сможете найти детальный разбор всех времен, получите качественные подсказки и как уместнее их использовать. Чтобы упростить изучения незнакомых слов, ниже будет размещен блок со всеми используемыми в примерах словами  и речевыми оборотами и их переводом.</p>
-			<p>Полезные статьи как для начинающих, так и для продвинутых будут размещены во вкладке "tools". </p>
-			<p>При возникновении вопросов по той или иной теме, пишите нам в группу в Телеграмме, ссылка на которую находится в верхней части страницы.</p>
-			<hr>
-		</article>
-		<article class="article-2">
-			<h1>Времена в английском языке</h1>
-			<p>Ангийский язык включает в себя 4 времени, в каждом из которых по 4 временных формы. В итоге - 16. Пугаться не стоит - их легко отличить друг от друга, так как они логичны и легки для понимания. Научиться орудовать ими в совершенстве за несколько дней не выйдет, необходимо время для усвоения материала. Лучший способ - практика.</p>
-			<p>Ниже находится кнопка "tenses". При нажатии выскочит меню, разбитое на четыре блока, в соответствии с уровнем сложности. Заметьте, последний 4-й блок включает времена, которые мало используются в повседневной жизни, но могут употребляться в разного вида литературе (художественной, научной, учебной и т.д.), а так же по телевиденью. </p>
-
-		
+			<h1>Present Simple: все о времени</h1>
+				<p>Начнем с самого просто. Это простое настощие время, которое используется чтобы выразить:</p>
+					<ul>
+						<li>Постоянное, обыденное или повторяемое действие: <span class="examples">I usually <span class="strong">go</span> there in the monring - Я обычно <span>хожу</span> туда утром.</span></li>
+						<li>Мысли и чувства, эмоциональные состояния: <span class="examples">I <span class="strong">like</span> it - Мне <span class="strong">нравится</span> это; You are busy - Ты занят.</span></li>
+						<li>Истину, известний факт, не ограниченный времеными рамками: <span class="examples">The Earth <span class="strong">goes around</span> the Sun - Земля <span class="strong">вращается</span> вокруг Солнца.</span></li>
+						<li>Действие в будущем, когда идет речь о чем-то наперед запланированом(используется, в частности, на иформационных табло, во время анононсирования теле- , радиопрограмм и т.д.): <span class="examples">The Film <span class="strong">begins</span> at 18:15 - Фильм <span class="strong">начнется</span> в 18:15.</span></li>
+						<li>В придаточных предложениях времени и условия, которые присоединяются с помощью союзов if, when, after, before, till, until, unless*: <span class="examples"><span class="strong">If</span> you call me, I will** try to help you - <span class="strong">Если</span> ты мне позвонишь, я попытаюсь тебе помочь.</span></li>
+					</ul>
+			<!--
 			<div class="drop-menu">
 				<a onclick="toggle(hidden_content)">tenses</a>
 			</div>
+
 			<div id="hidden_content" style="display: none;">
 				<div class="tenses">
 					<div class="tenses-holder">
@@ -115,13 +114,125 @@
 					
 				</div>
 			</div>
-		<hr>
+			<hr></!-->
 		</article>
-		<article class="article-3">
-			<h1>Пассивный залог в английском языке</h1>
-			<p>В предидущем блоке шла речь о временах, в который главную роль играл человек(я сделал, ты играл, мы не виделись сто лет и т.д.). Другими словами человек выполнял то или иное действия над предметом. В пассивном залоге мы смотрим на вещи под другим углом, где главную роль выполняет предмет(горшок был разбил, картина куплена, текст был написан мной) Passive Voice (англ.) - следующий, более продвинутый уровень в английском языке, овладев которым вы разнообразите свою речь и подниметесь в глазах окружающих.</p>
-			<p>
-			Изучение пассивного залога рекомендуется начинать после полного закрепления Active Voice (активного залога) , так как он имеет ряд особенностей и исключений базирующихся на ранее закрепленном материале. Чтобы полностью ознакомится c темой, перейдите <a href="#" class="article-3_link">сюда</a>.</p>
+		<article class="article-2">
+			<h2>Формула Present Simple</h2>
+			<h3>Утвердительное предложение</h3>
+			<p>Посколько это время является частью Active Voice, то здесь предмет выполняте действие. А делает он это, как уже выяснилось, обычно.</p>
+			<p>Для того чтобы составить предложение необходимо следовать определенным формулам. Для I, You, We, They всегда используется глагол в I форме (инфинитив):</p>
+			<div class="flex-container">
+				<div class="person">
+					<div>I</div>				
+					<div>You</div>
+					<div>We</div>
+					<div>They</div>
+				</div>
+				<div class="person">
+					<div>V<span style="vertical-align: sub; font-size: 10px;">1</span></div>
+				</div>
+			</div>
+			<ul>
+				<li><span class="examples"><span class="strong">We </span>often <span class="strong">go</span> there with her - Мы часто ходим туда вместе с ней.</span><li>
+				<li><span class="examples"><span class="strong">They </span>always <span class="strong">spend</span> time together - Они часто проводят время вместе.</span><li>
+			</ul>
+			<p>Для He, She, It всегда в утвердительных предлодениях используется глагол в I форме, но с добавлением окончания -s (-es).</p>
+			<div class="flex-container">
+				<div class="person">
+					<div>He</div>				
+					<div>She</div>
+					<div>It</div>
+				</div>
+				<div class="person">
+					<div>V<span style="vertical-align: sub; font-size: 10px;">1</span>+ s(-es)</div>
+				</div>
+			</div>
+			<ul>
+				<li><span class="examples"><span class="strong">He </span>sometimes <span class="strong">speaks</span> very rapidly - Он иногда говорит очень быстро.</span><li>
+				<li><span class="examples"><span class="strong">It </span><span class="strong"> costs</span> 10 dollars - Это стоит 10 долларов</span><li>
+			</ul>
+			<h3>Отрицальное предложение</h3>
+			<p>Для образования отрицания используется вспомогательная конструкция <span class="strong">do not</span> или <span class="strong">does not</span> (для соответствующих лиц)</p>
+			<div class="flex-container">
+				<div class="person">
+					<div>I</div>				
+					<div>You</div>
+					<div>We</div>
+					<div>They</div>
+				</div>
+				<div class="person">
+					<div>do not (don't)</div>
+				</div>
+			</div>
+			<ul>
+				<li><span class="examples"><span class="strong">I</span> usually <span class="strong">don't</span> walk down the street after midnight - Я обычно не хожу по улице после полуночи.</span></li>
+				<li><span class="examples"><span class="strong">We </span><span class="strong">don't</span> want to see you here again - Мы не хотим тебя видеть здесь вновь.</span></li>
+			</ul>
+			<div class="flex-container">
+				<div class="person">
+					<div>He</div>				
+					<div>She</div>
+					<div>It</div>
+				</div>
+				<div class="person">
+					<div>does not (doesn't)</div>
+				</div>
+			</div>
+			<ul>
+				<li><span class="examples"><span class="strong">She </span><span class="strong">does not</span> drink much water - Она не пьет много воды.</span></li>
+				<li><span class="examples">Our <span class="strong">company </span><span class="strong">does not </span>assist for free - Наша компания не помогает бесплатно.</span></li>
+			</ul>
+			<h3>Вопросительное предложение</h3>
+			<p>Для образования вопроса на первое место ставим вопросительное слово* (если необходимо) и/или<span class="strong">do not</span> или <span class="strong">does not</span>(для соответствующих лиц)</p>
+			<div class="flex-container">
+				<div class="person">
+					<div>What</div>
+					<div>When</div>
+					<div>Where</div>
+					<div>How</div>
+				</div>
+				<div class="person">
+					<div>do</div>
+				</div>
+				<div class="person">
+					<div>I</div>				
+					<div>You</div>
+					<div>We</div>
+					<div>They</div>
+				</div>
+				<div class="person">
+					<div>V<span style="vertical-align: sub; font-size: 10px;">1</span></div>
+				</div>
+			</div>
+			<ul>
+				<li><span class="examples">What <span class="strong">do </span>they <span class="strong">want</span> from me? - Что они хотят от меня?</span></li>
+				<li><span class="examples"><span class="strong">Do </span>you often <span class="strong">smoke </span>after sex?- Ты обычно куришь после секса?</span></li>
+			</ul>
+
+			<div class="flex-container">
+				<div class="person">
+					<div>What</div>
+					<div>When</div>
+					<div>Where</div>
+					<div>How</div>
+				</div>
+				<div class="person">does</div>
+				<div class="person">
+					<div>He</div>				
+					<div>She</div>
+					<div>It</div>
+				</div>
+				<div class="person">
+					<div>V<span style="vertical-align: sub; font-size: 10px;">1</span></div>
+				</div>
+			</div>
+			<ul>
+				<li><span class="examples">How often <span class="strong">does </span>she <span class="strong">drive</span> her car? - Как часто она водит свою машину?</span></li>
+				<li><span class="examples">How much <span class="strong">does </span>it <span class="strong">hurt </span>- Насколько это больно?</span></li>
+			</ul>
+
+
+			<!--
 			<div class="drop-menu">
 				<a onclick="toggle(hidden_content_2)">passive voice</a>
 			</div>
@@ -146,7 +257,7 @@
 						</ul>
 					</div>
 					
-				</div>
+				</div></!-->
 			</div>
 			<hr>
 		</article>
