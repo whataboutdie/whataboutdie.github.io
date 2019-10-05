@@ -170,13 +170,13 @@ nav {
 
 article{
 	padding: 0 2% 2% 2%;
+	display: inline-block;
 }
   
 /****************1 статья******************/
 
 .article-1{
 	width: 100%;
-	display: block;
 	/*border: 1px solid black;*/
 }
 
@@ -189,14 +189,15 @@ article{
 	border: 1px solid #AEB8C3;
 }
 
+/******************2 статья********************/
+
 .article-2{
 	width: 100%;
-	display: block;
 	/*border: 1px solid black;*/
 	margin:0;
 }
  
-/******************2 статья********************/
+
 
 .article-2 h1{
 	margin-top: 0;
@@ -279,7 +280,6 @@ article{
 
 .article-3{
 	width: 100%;
-	display: block;
 	/*border: 1px solid black;*/
 	margin:0;
 }
@@ -320,7 +320,6 @@ article{
 
 .article-4{
 	width: 100%;
-	display: block;
 	/*border: 1px solid black;*/
 	margin:0;
 }
