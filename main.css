@@ -9,7 +9,8 @@
 	box-sizing: border-box;
 	/*font-family: 'Ubuntu', sans-serif;*/
 	/*font-family: 'Roboto', sans-serif ;*/
-	font-family: 'Roboto Slab', serif;
+	/*font-family: 'Roboto Slab', serif;*/
+	font-family: 'Montserrat Alternates', sans-serif;
 }
 
 ::selection{
