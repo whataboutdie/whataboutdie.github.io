@@ -194,7 +194,7 @@ article{
 }
 
 ul{
-	padding: 0 0 0 30px;
+	padding: 0 0 0 20px;
 
 }
 
@@ -498,14 +498,15 @@ ul{
 		display: none; /*убирает ссылку на телеграм вверху страницы*/
 	}
 
+	ul{
+	padding: 0px; /*0px отступа для телефонов*/
+	}
+
 	.telegram{
 		display: block; /*добавляет ссылку на телеграм к общему меню*/
 	}
 	.block_main{
 		text-align: center; /*логотип по центру*/
-	}
-	article h1{
-		text-align: center; /*заголовки по центру*/
 	}
 	article{
 	padding: 0 5% 2% 5%;
