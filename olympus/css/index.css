@@ -442,6 +442,10 @@ footer{
 	.contacs_content > form > div{
 		width: 100%;
 	}
+	.service_grid > div > p{
+		padding-left: 0px;
+		flex: 3;
+	}
 
 
 
