@@ -424,6 +424,26 @@ footer{
 	.contacs_content{
 		flex-direction: column;
 	}
+	.contacs_content > form{
+		margin-top: 1em ;
+		border-left: 0px solid #c4b7a6;
+	}
+	.service_grid{
+		grid-auto-rows: 20px;
+	}
+	#btn_move_to_top{
+		right: 0;
+		bottom: 150px;
+	}
+	.gallery-wrap{
+		height: 150px;
+	}
+	button, input, select, textarea{
+		width: 100%;
+	}
+	.contacs_content > form > div{
+		width: 100%;
+	}
 
 
 
