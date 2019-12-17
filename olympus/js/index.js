@@ -43,7 +43,7 @@ function sliderDown() {
 
 
 
-setInterval(sliderUp,7000);//Выполняет функцию(Слeд Слайд) каждые 1,5 Сек
+setInterval(sliderUp,7000);//Выполняет функцию(Слeд Слайд) каждые 7Сек
 
 //show/hide information on article
 
