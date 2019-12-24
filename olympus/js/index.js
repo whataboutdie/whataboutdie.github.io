@@ -66,7 +66,7 @@ function showMore(){
 let scrolled, timer;
 
 document.getElementById('btn_move_to_top').onclick = function(){
-	//document.getElementById('btn_move_to_top').style.opacity = '1';
+	
 	scrolled = window.pageYOffset;
 	console.log(window.pageYOffset);
 	scrolledToTop();
