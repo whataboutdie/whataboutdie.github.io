@@ -2,7 +2,7 @@
 
 console.log('it works');
 
-function parallax(event) {
+/*function parallax(event) {
     this.querySelectorAll('.layer').forEach(layer => {
         let speed = layer.getAttribute('data-speed');
         layer.style.transform =  `translateX(${event.clientX*speed/1000}px)`;
@@ -10,7 +10,7 @@ function parallax(event) {
     });
 }
 
-document.addEventListener('mousemove' , parallax);
+document.addEventListener('mousemove' , parallax);*/
 
 let ulMenuShow = document.getElementById('ul__menu');
 let ulMenuItems = document.getElementById('ul__menu-items');
