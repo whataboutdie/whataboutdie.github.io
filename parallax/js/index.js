@@ -2,16 +2,6 @@
 
 console.log('it works');
 
-/*function parallax(event) {
-    this.querySelectorAll('.layer').forEach(layer => {
-        let speed = layer.getAttribute('data-speed');
-        layer.style.transform =  `translateX(${event.clientX*speed/1000}px)`;
-        //layer.style.transform =  `translate3d(${event.pageY*speed/1000}px)`;
-    });
-}
-
-document.addEventListener('mousemove' , parallax);*/
-
 let ulMenuShow = document.getElementById('ul__menu');
 let ulMenuItems = document.getElementById('ul__menu-items');
 let nav = document.getElementsByTagName('nav');
@@ -36,3 +26,32 @@ ulMenuShow.onclick = function(){
     }
 };
 
+let scrolled, timer;
+let btnToTop = document.getElementById('btn_to_top');
+
+
+btnToTop.onclick = function(){
+    scrolled = window.pageYOffset;
+    console.log('scrolled: ', scrolled);
+    toTop();
+    //moveTo(); //moving up rapidly than toTop( )
+}
+
+/*function moveTo() {
+    window.scrollTo({
+        top: 1,
+        behavior: 'smooth'
+    })
+}*/
+
+function toTop() {
+    if (scrolled > 0) {
+        window.scrollTo(0, scrolled);
+        scrolled = scrolled -10;
+        timer = setTimeout(toTop, 1);
+    } else {
+        clearTimeout(timer);
+        window.scrollTo(0,0);
+        
+    }    
+}
