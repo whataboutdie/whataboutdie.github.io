@@ -52,7 +52,7 @@ body, html{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: absolute;  
     font-size: 30px;
     font-weight: 900;
     text-align: center;
@@ -188,6 +188,7 @@ nav:hover:after{
     bottom: 0;
     left: 0;
     right: 0;
+    margin: 0 auto;
     width: 95%;
     height: 100%;
     position: absolute;
@@ -224,8 +225,9 @@ main{
     margin: 2em 0 2em 0;
     width: 100%;
     height: 500px;
-    border: 2px solid lightsalmon;
+    border-top: 2px solid lightsalmon;
     border-radius: 10px;
+    background: rgba(255,255,255, 0.05);
 }
 
 .article__about{
@@ -237,13 +239,34 @@ main{
 }
 
 .article__about::before{
-    content: 'About';
+    border-radius: 20px;
+    content: 'Who am I?';
     position: absolute;
     padding: 0 1em 0 1em;
     background: #121121;
     font-size: 30px;
     width: auto;
-    bottom: 97%;
+    bottom: calc(100% - 15px);
+    text-align: center;
+}
+
+.article__projects{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article__projects::before{
+    border-radius: 20px;
+    content: 'Projects';
+    position: absolute;
+    padding: 0 1em 0 1em;
+    background: #121121;
+    font-size: 30px;
+    width: auto;
+    bottom: calc(100% - 15px);
     text-align: center;
 }
 
