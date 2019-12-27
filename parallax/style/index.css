@@ -216,21 +216,128 @@ main{
 }
 
 .main_content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1em;
     max-width: 1200px;
     width: 95%;
-    margin: 1em auto;
+    margin: 2em auto;
+}
+
+.author_wrapper{
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    height: 500px;
+    grid-column: 1/2;
+}
+
+.card{
+    margin: 2em auto;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+    
+}
+
+.front img,
+.back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid lightsalmon;
+}
+
+.front,
+.back{  
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    transition: transform 1000ms ease;
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.card:hover .front{
+    transform: rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: rotateY(360deg);
+}
+
+.author_title_wrap{
+    width: 95%;
+    margin: 0 auto;
+    height: auto;
+    text-align: center;
+}
+
+.author_title_name{
+    font-size: 20px;
+}
+
+.author_title_links *{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+    text-decoration: none;
+    color: lightsalmon;
+}
+
+.author_title_links ul li{
+    margin: 5px !important;
+}
+
+.author_title_links a{
+    position: relative;
+}
+
+.author_title_links a:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: lightsalmon;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease;
+}
+
+.author_title_links a:hover:after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+.articles_wrapper{
+    width: 100%;
+    height: auto;
+    grid-column: 2/-1;
 }
 
 .article{
-    margin: 2em 0 2em 0;
+    line-height: 1.5;
+    margin: 2em 0;
     width: 100%;
-    height: 500px;
     border-top: 2px solid lightsalmon;
-    border-radius: 10px;
-    background: rgba(255,255,255, 0.05);
+    /*background: rgba(255,255,255, 0.05);*/
 }
 
 .article__about{
+    padding: 1em 0;
+    height: auto;
     width: 100%;
     position: relative;
     display: flex;
@@ -251,6 +358,7 @@ main{
 }
 
 .article__projects{
+    height: 500px;
     width: 100%;
     position: relative;
     display: flex;
@@ -269,6 +377,28 @@ main{
     bottom: calc(100% - 15px);
     text-align: center;
 }
+
+.article__contact{
+    height: 500px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article__contact::before{
+    border-radius: 20px;
+    content: 'Contact';
+    position: absolute;
+    padding: 0 1em 0 1em;
+    background: #121121;
+    font-size: 30px;
+    width: auto;
+    bottom: calc(100% - 15px);
+    text-align: center;
+}
+
 
 /********************************footer***********************/
 
