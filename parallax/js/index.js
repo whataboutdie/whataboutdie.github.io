@@ -1,28 +1,69 @@
 'use strict';
 
 console.log('it works');
-
+let ulMenuWrapper = document.getElementById('ul__menu__wrapper');
 let ulMenuShow = document.getElementById('ul__menu');
 let ulMenuItems = document.getElementById('ul__menu-items');
-let nav = document.getElementsByTagName('nav');
+let nav = document.getElementById('nav');
+
+let windowWidth = document.documentElement.clientWidth;
 
 nav.onmouseover = function(){
-    ulMenuShow.style.boxShadow = '0 5px 0 white';
+    if (windowWidth <= 768) {
+        ulMenuShow.style.boxShadow = '0 0px 0 lightblue';
+    }
+    else{
+        ulMenuShow.style.boxShadow = '0 0px 0 white';
+    }
+    
     
 };  
 
 nav.onmouseout = function(){
-    ulMenuShow.style.boxShadow = '0 5px 0 lightblue';
+    if (windowWidth <= 768) {
+        ulMenuShow.style.boxShadow = '0 0px 0 lightblue';
+    }
+    else{
+        ulMenuShow.style.boxShadow = '0 0px 0 lightblue';
+    }
+   
 };
 
 ulMenuShow.onclick = function(){
     
-    if (ulMenuItems.style.display == 'flex') {
-        ulMenuItems.style.display = 'none';
+    if (ulMenuItems.style.display == 'flex') {        
+        if (windowWidth <= 768) {
+            ulMenuItems.style.display = 'none';
+            ulMenuWrapper.style.background = 'transparent';
+            ulMenuShow.style.color = 'white';
+            ulMenuShow.innerHTML = 'Menu';
+            nav.style.position = 'static';
+            nav.style.top = '';
+            nav.style.bottom = '';
+            nav.style.left = '';
+            nav.style.right = '';
+        }
+        else{
+            ulMenuItems.style.display = 'none';
+        }
 
     }
     else{
-        ulMenuItems.style.display = 'flex';
+        
+        if (windowWidth <= 768 ) {
+            nav.style.position = 'fixed';
+            nav.style.top = 0;
+            nav.style.bottom = 0;
+            nav.style.left = 0;
+            nav.style.right = 0;
+            ulMenuWrapper.style.background = 'white';
+            ulMenuShow.style.color = 'black';
+            ulMenuShow.innerHTML = 'Close';
+            ulMenuItems.style.display = 'flex';
+        }
+        else{
+            ulMenuItems.style.display = 'flex';
+        }
     }
 };
 
