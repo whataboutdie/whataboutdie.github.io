@@ -32,7 +32,7 @@ nav.onmouseout = function(){
 ulMenuShow.onclick = function(){
     
     if (ulMenuItems.style.display == 'flex') {        
-        if (windowWidth <= 768) {
+        if (windowWidth <= 1024) {
             ulMenuItems.style.display = 'none';
             ulMenuWrapper.style.background = 'transparent';
             ulMenuShow.style.color = 'white';
@@ -50,7 +50,7 @@ ulMenuShow.onclick = function(){
     }
     else{
         
-        if (windowWidth <= 768 ) {
+        if (windowWidth <= 1024 ) {
             nav.style.position = 'fixed';
             nav.style.top = 0;
             nav.style.bottom = 0;

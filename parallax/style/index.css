@@ -99,7 +99,7 @@ nav{
 
 }
 
-nav:after{
+/*nav:after{
 
     content: '';
     position: absolute;
@@ -119,7 +119,7 @@ nav:after{
 nav:hover:after{
     transform: scaleX(1);
 
-}
+}*/
 
 .ul__menu{
     grid-column: 1/4;
@@ -429,7 +429,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
     .scene{
         display: none;
     }
