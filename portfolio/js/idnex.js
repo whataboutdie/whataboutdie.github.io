@@ -20,18 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuAbout.addEventListener('mouseover', () =>{
         chosenMenu.innerHTML = 'about';
+        chosenMenu.classList.add('opacity');
     })
 
     menuAbout.addEventListener('mouseout', () =>{
         chosenMenu.innerHTML = '';
+        chosenMenu.classList.remove('opacity');
     })
 
     menuProjects.addEventListener('mouseover', () =>{
         chosenMenu.innerHTML = 'projects';
+
+        chosenMenu.classList.add('opacity');
     })
 
     menuProjects.addEventListener('mouseout', () =>{
         chosenMenu.innerHTML = '';
+        chosenMenu.classList.remove('opacity');
     })
 
 });
