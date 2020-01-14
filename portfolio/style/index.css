@@ -93,6 +93,7 @@ body, html{
 }
 
 .choose_item ul li{
+    background:white;
     flex: 1;
     display: inherit;
     justify-content: center;
@@ -107,8 +108,11 @@ body, html{
     letter-spacing: .5rem;
 }
 
+.show_itsname{
+    position: relative;
+}
 
-.show_itsname ul{
+.show_menu_headering{
     padding: 0;
     margin: 0;
     width: 500px;
@@ -121,30 +125,97 @@ body, html{
     font-size: 10rem;
     color: lightgray;
     
+    
 }
 
 #show_chosen_menu{
     opacity: 0;
+
     
 }
 
 .opacity{
-    opacity:0; /*Элемент полностью прозрачный (невидимый)*/
-    transition: 1s; /*Скорость перехода состояния элемента*/
+    opacity: 0;
     animation: show 500ms 1; /* Указываем название анимации, её время и количество повторов*/
     animation-fill-mode: forwards;
     animation-delay: 100ms; /* Задержка перед началом */
 }
 
+#show_projects{
+    width: 225px;
+    height: auto;
+    padding: 1rem 0;
+    margin: 0;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    list-style: none;
+    background: #000;
+    transform-origin: left;
+    transform: scaleX(0);
+    z-index: 5;
+    display: none;
+
+}
+
+.open{
+    transform: scaleX(0);
+    transition: 1s;
+    animation: open 500ms 1;
+    animation-fill-mode: forwards;
+
+}
+
+.close{
+    transform: scaleX(1);
+    transition: 1s;
+    animation: close 500ms 1;
+    animation-fill-mode: forwards;
+}
+
+#show_projects li{
+    color: white;
+    width: calc(100% - 2rem);  
+    margin: 0 auto 1rem auto; 
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    cursor: pointer;
+}
+
+
 
 @keyframes show{
     0%{
-    opacity:0;
+        opacity: 0;
     }
     100% {
-    opacity: 1;
+        opacity: 1;
+
     }
+}
+
+@keyframes open{
+    0%{
+        transform: scaleX(0);
     }
+    100%{
+        transform: scaleX(1);
+        
+    }
+}
+
+@keyframes close{
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
+}
 
 .me,
 .me img{
@@ -153,7 +224,7 @@ body, html{
 }
 
 .me{
-    background: black;
+    background: red;
 
 }
 
@@ -162,7 +233,7 @@ body, html{
     height: auto;
     width: auto;
     display: grid;
-    grid-template-rows: 250px 1fr;
+    grid-template-rows: 250px 250px;
 }
 
 .about p:first-child{
