@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper = document.getElementById('wrapper'),
         pleaseholder = document.getElementById('viewport-small'),
         viewportWidth = document.documentElement.clientWidth,
-        timer;
+        timer,
+        project1 = document.getElementById('project1');
 
     
     if (viewportWidth <= 1000) {
@@ -44,23 +45,28 @@ document.addEventListener('DOMContentLoaded', () => {
     /**********/
 
     menuProjects.addEventListener('click' , () =>{
-        if (showProjects.style.display == 'block') {
+        if (showProjects.style.display == 'grid') {
             showProjects.classList.add('close');
             showProjects.classList.remove('open');
+            menuProjects.innerHTML = 'projects';
+            /*menuProjects.style.borderTop = '0px solid black';
+            menuProjects.style.borderLeft = '0px solid black';
+            menuProjects.style.borderRight = '0px solid black';
+            menuProjects.style.background = 'transparent';*/
             console.log('closed');
-            setTimeout(closeitfuckyou, 500);
-            menuProjects.innerHTML = 'projects'
-            menuProjects.style.background = 'white';
-            menuProjects.style.color = 'black';
+            setTimeout(closeitfuckyou, 250);
+            
                   
         } else {
-            showProjects.style.display = 'block';
+            showProjects.style.display = 'grid';
             showProjects.classList.add('open');
             showProjects.classList.remove('close');
             console.log('opened');
             menuProjects.innerHTML = 'close';
-            menuProjects.style.background = 'black';
-            menuProjects.style.color = 'white';
+            /*menuProjects.style.borderTop = '1px solid white';
+            menuProjects.style.borderLeft = '1px solid white';
+            menuProjects.style.borderRight = '1px solid white';
+            menuProjects.style.background = '#F5F5F5';*/
         }
         
     });
@@ -68,5 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeitfuckyou(params) {
         showProjects.style.display = 'none';
     }
+
+    project1.addEventListener('click', () => {
+        
+    })
 
 });
