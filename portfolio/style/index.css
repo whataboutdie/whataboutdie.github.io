@@ -213,6 +213,7 @@ body, html{
     overflow-y: scroll;
     scrollbar-color: #e4e5e7 #f5f6fa;
     scrollbar-width: thin;
+    position: relative;
 }
 
 ::-webkit-scrollbar{
@@ -227,6 +228,115 @@ body, html{
     background: #e4e5e7;
 }
 
+.advice{
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.advice_content{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.advice_content_photo{
+    width: 150px;
+    height: 150px;
+}
+
+.advice_content_photo img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.advice_content_text{
+    text-align: center;
+    width: 200px;
+    height: auto;
+    color: #C1C1C1;
+}
+
+#grammarProject{
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: .5rem .5rem 0 .5rem;
+    
+}
+
+.grammarProject_content{
+    line-height: 1.5;
+    width: auto;
+    height: auto;
+}
+
+.grammarProject_content img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.grammarProject_content h1{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.grammarProject_content h1 a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+.grammarProject_content a:after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    transform: scaleX(0.3);
+    transform-origin: left;
+    transition: transform 250ms ease;
+}
+
+.grammarProject_content a:hover:after{
+    transform: scaleX(1);
+}
+
+
+table{
+    width: 100%;
+    height: auto;
+    background: white;
+    border-collapse: collapse;
+}
+
+.table tr{
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+table td {
+    width: 50%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 0.5rem;
+}
 
 
 .open{

@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         pleaseholder = document.getElementById('viewport-small'),
         viewportWidth = document.documentElement.clientWidth,
         timer,
-        project1 = document.getElementById('project1');
+        project1 = document.getElementById('project1'),
+        grammarProj = document.getElementById('grammarProject'),
+        grammarBtn = document.getElementById('grammar'),
+        modalAdvice = document.getElementById('advice');
 
     
     if (viewportWidth <= 1000) {
@@ -49,10 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
             showProjects.classList.add('close');
             showProjects.classList.remove('open');
             menuProjects.innerHTML = 'projects';
-            /*menuProjects.style.borderTop = '0px solid black';
-            menuProjects.style.borderLeft = '0px solid black';
-            menuProjects.style.borderRight = '0px solid black';
-            menuProjects.style.background = 'transparent';*/
             console.log('closed');
             setTimeout(closeitfuckyou, 250);
             
@@ -63,10 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
             showProjects.classList.remove('close');
             console.log('opened');
             menuProjects.innerHTML = 'close';
-            /*menuProjects.style.borderTop = '1px solid white';
-            menuProjects.style.borderLeft = '1px solid white';
-            menuProjects.style.borderRight = '1px solid white';
-            menuProjects.style.background = '#F5F5F5';*/
         }
         
     });
@@ -75,8 +70,17 @@ document.addEventListener('DOMContentLoaded', () => {
         showProjects.style.display = 'none';
     }
 
-    project1.addEventListener('click', () => {
-        
-    })
+
+    /***********/
+
+    grammarBtn.addEventListener('click', () => {
+        if (modalAdvice.style.display == 'none') {
+            modalAdvice.style.display = 'flex';
+            grammarProj.style.display = 'none';
+        } else {
+            modalAdvice.style.display = 'none';
+            grammarProj.style.display = 'flex';
+        }
+    });
 
 });
