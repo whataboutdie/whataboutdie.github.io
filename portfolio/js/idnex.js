@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('welcome to my console!');
     
-    let chosenMenu = document.getElementById('show_chosen_menu'),
+    let chosenMenu = document.getElementById('show_chosen_item'),
         menuAbout = document.getElementById('menu_about'),
         menuProjects = document.getElementById('menu_projects'),
         showProjects = document.getElementById('show_projects'),
@@ -77,9 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalAdvice.style.display == 'none') {
             modalAdvice.style.display = 'flex';
             grammarProj.style.display = 'none';
+            grammarBtn.classList.remove('active');
         } else {
             modalAdvice.style.display = 'none';
             grammarProj.style.display = 'flex';
+            grammarBtn.classList.add('active');
         }
     });
 
