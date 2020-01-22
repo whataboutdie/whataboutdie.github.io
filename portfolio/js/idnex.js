@@ -7,15 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
         menuAbout = document.getElementById('menu_about'),
         menuProjects = document.getElementById('menu_projects'),
         showProjects = document.getElementById('show_projects'),
+        showAbout = document.getElementById('show_about'),
         wrapper = document.getElementById('wrapper'),
         pleaseholder = document.getElementById('viewport-small'),
         viewportWidth = document.documentElement.clientWidth,
         timer,
+        zIndexProject,
+        zIndexAbout,
         project1 = document.getElementById('project1'),
         grammarProj = document.getElementById('grammarProject'),
         grammarBtn = document.getElementById('grammar'),
         modalAdvice = document.getElementById('advice');
-
     
     if (viewportWidth <= 1000) {
         wrapper.style.display = 'none';
@@ -54,20 +56,46 @@ document.addEventListener('DOMContentLoaded', () => {
             menuProjects.innerHTML = 'projects';
             console.log('closed');
             setTimeout(closeitfuckyou, 250);
-            
                   
         } else {
             showProjects.style.display = 'grid';
+            console.log('zIndexProject: ', zIndexProject);
             showProjects.classList.add('open');
             showProjects.classList.remove('close');
             console.log('opened');
             menuProjects.innerHTML = 'close';
+            setTimeout(closeitfuckyou2, 50);
+        }
+        
+    });
+    
+    menuAbout.addEventListener('click' , () =>{
+        if (showAbout.style.display == 'grid') {
+            showAbout.classList.add('close');
+            showAbout.classList.remove('open');
+            menuAbout.innerHTML = 'about';
+            console.log('closed');
+            setTimeout(closeitfuckyou2, 250);
+            
+            
+                  
+        } else {
+            setTimeout(closeitfuckyou, 50);
+            showAbout.style.display = 'grid';
+            showAbout.classList.add('open');
+            showAbout.classList.remove('close');
+            console.log('opened');
+            menuAbout.innerHTML = 'close';
         }
         
     });
 
     function closeitfuckyou(params) {
         showProjects.style.display = 'none';
+    }
+
+    function closeitfuckyou2(params) {
+        showAbout.style.display = 'none';
     }
 
 
