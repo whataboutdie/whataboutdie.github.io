@@ -1,15 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>projects</title>
-	<meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/index.css">
+    <title>Chub Nikolay</title>
 </head>
 <body>
-<ul>
-	<li><a href="grammar/index.html"> ПРОЕКТ "ГРАММАТИКА АНГЛ ЯЗЫКА" (beta)</a></li>
-	<li><a href="shop/index.html">ПРОЕКТ "ИНТЕРНЕТ МАГАЗИН" (beta)</a></li>
-	<li><a href="olympus/index.html">ПРОЕКТ для олимпиады</a></li>
-	<li><a style="font-size: 50; color: red;"  href="portfolio/index.html">портфолио</a></li>
-</ul>
+    <div id="viewport-small">
+        Please open in desktop browser to have better experience
+    </div>
+    <div class="wrapper" id="wrapper">
+        <div class="content">
+            <div class="content__menu">
+                <div class="menu">
+                    <ul class="">
+                        <li class="menu__items" id="menu_about">about</li>
+                        <li class="menu__items" id="menu_projects">projects</li>
+                    </ul>
+                </div>
+                <div class="menu__show">
+                    <ul class="show_menu_items">
+                        <li id="show_chosen_item"></li>
+                    </ul>
+                    <div id="show_about" class="show_block show_block-about">
+                        <div class="block_about_photo">
+                            <img src="img/me2.jpg" alt="">
+                        </div>
+                        <div class="block_about_text">
+                            <h1>Chub Nikolay</h1>
+                            <h3>self-taught web-programmer</h3>
+                            <p>I have already got basic knowledges in HTML5 and CSS3 which allows me to create simple landing web-pages in minimalism. Furthermore, this is my favorite style and I aim to keep on working with that. </p>
+                            <p>I am actively learning JavaScript which has already allowed me creating simple animated pages such as my portfolio.</p>
+                            
+                            <div class="media">
+                                <div class="media__body">
+                                    <a href="https://www.instagram.com/whataboutdie/?hl=ru">instagram</a>
+                                    <a href="https://github.com/whataboutdie">github</a>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div id="show_projects" class="show_block show_block-proj">
+                        
+                        <!--PROJECTS LIST-->
+
+                        <div class="projects_list">
+                            <li id="grammar">Grammar</li>                            
+                        </div>
+
+                        <!--PROJECTS LIST END-->
+
+                        <!--ABOUT PROJECT-->
+                        <div class="project_about">
+                            <div class="advice" id="advice">
+                                <div class="advice_content_photo">
+                                    <img src="img/pointer.svg" alt="">
+                                </div>
+                                <div class="advice_content_text">
+                                    please, choose my projects which you are interesting in
+                                </div>   
+                            </div>
+
+                            <!--GRAMMAR PROJECT-->
+
+                            <div id="grammarProject">
+                                <div class="grammarProject_content">
+
+                                    <!--SITE VIEW-->
+
+                                    <img src="img/projects_img/grammar/Grammar_index.png" alt="">
+
+                                    <!--SITE VIEW END-->
+
+                                    <!--SITE HEADERING-->
+
+                                    <h1><a href="../grammar/index.html">The Grammar</a></h1>
+
+                                    <!--SITE HEADERING END-->
+
+                                    <!--main chapter-->
+
+                                    <p>Below you can see some information about project</p>
+
+                                    <table>
+                                        <tr>
+                                            <td>Date of release</td>
+                                            <td>unreleased</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Progress</td>
+                                            <td style="color: red;">unfinished</td>
+                                        </tr>
+                                        <tr>
+                                            <td>what was used</td>
+                                            <td>HTML5, CSS3</td>
+    
+                                        </tr>
+                                        <tr>
+                                            <td>Idea</td>
+                                            <td>To create site for learning English for Russian speaking people</td>
+                                        </tr>
+                                        
+                                    </table>
+                                    
+                                    <h3>Why is project unfinished?</h3>
+                                    <p>
+                                        Site is underdone because of my having lost desire to keep on working on it. I have done necessary markup and have added styles. All i needed was to 
+                                        add content in order to it would not look like empty page. That process took too much time which I could spent in learning something new.
+                                        I followed right in that way. 
+                                    </p>
+                                    <hr>
+
+                                    <h3>Idea</h3>
+                                    <p>
+                                        It was about September, 2019 when I actually had been starting to learn web-programming. Idea of creating site, as you can see above,
+                                        came to my mind when I had been on my English course lesson. That day we should learn new theme and while I was taking notes of it, the idea of
+                                        making internet project to learn English for free and everybody went in my mind. Then I already knew how it would look on the site.  
+                                    </p>
+                                    <h3>Technical part</h3>
+                                    <p>
+                                        That projects was written by me useing basic skills in HTML5 and CSS3. It took me about month to learn them. Then I even didnt know how to
+                                        hide element and show it when its required, thus I had to seek out a solution. Euidently that it was simple JavaScript that scared me.
+                                    </p>
+                                    
+                                    <img src="img/projects_img/grammar/examlpe.png" alt="">
+                                </div>
+                            </div>
+                            <!--GRAMMAR END-->
+
+                        </div>
+                        <!--ABOUT PROJECT END-->
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="content__label">
+                <!--<img src="img/me.gif" alt="">-->
+            </div>
+            <div class="content__about">
+                <p>Chub Nikolay</p>
+                <p>self-taught web-programmer</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+<script src="js/idnex.js"></script>
 </body>
 </html>
