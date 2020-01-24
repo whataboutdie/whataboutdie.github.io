@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('opened');
             menuProjects.innerHTML = 'close';
             setTimeout(closeitfuckyou2, 50);
+            menuAbout.innerHTML = 'about';
         }
         
     });
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showAbout.classList.remove('close');
             console.log('opened');
             menuAbout.innerHTML = 'close';
+            menuProjects.innerHTML = 'projects';
         }
         
     });
