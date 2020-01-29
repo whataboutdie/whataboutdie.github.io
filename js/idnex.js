@@ -11,12 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper = document.getElementById('wrapper'),
         pleaseholder = document.getElementById('viewport-small'),
         viewportWidth = document.documentElement.clientWidth,
-        timer,
-        zIndexProject,
-        zIndexAbout,
-        project1 = document.getElementById('project1'),
         grammarProj = document.getElementById('grammarProject'),
         grammarBtn = document.getElementById('grammar'),
+        maryProj = document.getElementById('mary_portfolioProject'),
+        maryBtn = document.getElementById('mary_portfolio'),
         modalAdvice = document.getElementById('advice');
     
     if (viewportWidth <= 1000) {
@@ -59,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
                   
         } else {
             showProjects.style.display = 'grid';
-            console.log('zIndexProject: ', zIndexProject);
             showProjects.classList.add('open');
             showProjects.classList.remove('close');
             console.log('opened');
@@ -108,11 +105,31 @@ document.addEventListener('DOMContentLoaded', () => {
             modalAdvice.style.display = 'flex';
             grammarProj.style.display = 'none';
             grammarBtn.classList.remove('active');
+            
+            maryBtn.classList.remove('active');
+            maryProj.style.display = 'none';
+            
         } else {
             modalAdvice.style.display = 'none';
             grammarProj.style.display = 'flex';
-            grammarBtn.classList.add('active');
+            grammarBtn.classList.add('active');         
         }
     });
+
+    maryBtn.addEventListener('click', () => {
+        if (modalAdvice.style.display == 'none') {
+            modalAdvice.style.display = 'flex';
+            maryProj.style.display = 'none';
+            maryBtn.classList.remove('active');
+
+            grammarProj.style.display = 'none';
+            grammarBtn.classList.remove('active');
+        } else {
+            modalAdvice.style.display = 'none';
+            maryProj.style.display = 'flex';
+            maryBtn.classList.add('active');
+        }
+    });
+
 
 });
