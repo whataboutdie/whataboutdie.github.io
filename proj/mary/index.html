@@ -13,9 +13,9 @@
         <header class="label">
             <nav class="label__navigation">
                 <ul class="label__menu">
-                    <li class="label__menu_list active_page"><a href="#">Home</a></li>
-                    <li class="label__menu_list"><a href="#">About</a></li>
-                    <li class="label__menu_list"><a href="#">Projects</a></li>
+                    <li class="label__menu_list active_page">Home</li>
+                    <li id="btn__scroll-projects" class="label__menu_list">Projects</li>
+                    <li id="btn__scroll-about" class="label__menu_list">About</li>
                 </ul>
             </nav>
             <div class="label__maincontent">
@@ -66,7 +66,7 @@
         </header>
 
         <main>
-            <div class="projects">
+            <div id="block__projects"class="projects">
                 <div class="block__title">
                     <h1>
                         There are some of my works
@@ -135,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about">
+            <div id="block__about"class="about">
                 <div class="block__title">
                     <h1>
                         About
@@ -144,7 +144,8 @@
                         Here is some detail information of myself
                     </h3>
                 </div>
-                <div class="about__body  rellax" data-rellax-percentage="0.5">
+                  <!--rellax" data-rellax-percentage="0.5"-->
+                <div class="about__body rellax" data-rellax-percentage="0.5">
                     <div class="about__photo">
                         <img src="imgs/pj/pj1.jpg" alt="">
                     </div>
@@ -158,19 +159,16 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum est eveniet explicabo, ipsa recusandae debitis ullam amet cupiditate velit totam laudantium natus nobis libero impedit nisi voluptas at numquam?
                         </p>
                     </div>
+                    <div class="about__certificate">
+                        <h1 id="btn__showblock-certificates">
+                            Show certificates
+                        </h1>
+                    </div>
                 </div>
             </div>
-            <div class="certificates">
-                <div class="block__title">
-                    <h1>
-                        Certificates
-                    </h1>
-                    <h3>
-                        Here is all my certificates
-                    </h3>
-                </div>
-                <div class="certificates__body rellax" data-rellax-percentage="0.5">
-                    <div class="certificates__item certificates__item1">
+            <div id="block__certificates" class="certificates">
+                <div class="certificates__body">
+                    <div class="certificates__item certificates__item1 ">
                         <img src="imgs/1.jpg" alt="">
                     </div>
                     <div class="certificates__item certificates__item2 ">
@@ -191,11 +189,15 @@
         <footer>    
 
         </footer>
+        <div id="btn__to-top">
+
+        </div>
         
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/rellax.min.js"></script>
+    <script src="js/index.js"></script>
     <script>
         
 		var rellax = new Rellax('.rellax', {center: true});
