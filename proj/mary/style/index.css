@@ -1,22 +1,3 @@
-/*@font-face {
-    font-family: 'Regular';
-    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'),
-        url('../fonts/SFProDisplay-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Light';
-    src: local('SF Pro Display Light'), local('SFProDisplay-Light'),
-        url('../fonts/SFProDisplay-Light.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}
-
-/*Here is caligrafic font*/
-/*@import url('https://fonts.googleapis.com/css?family=Dynalight&display=swap');*/
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&display=swap&subset=cyrillic');
 
 :root{
@@ -28,10 +9,9 @@ body, html{
     margin: 0;
     width: 100%;
     height: 100%;
-    /*font-family: 'Regular';
-    */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+
 }
 
 *,
@@ -85,7 +65,7 @@ body, html{
 p{
     padding: 0;
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.5rem;
 }
 
@@ -362,6 +342,10 @@ p{
     font-weight: 300;
 }
 
+.btn__mobile-scroll{
+    display: none;
+}
+
 
 
 /***********************main*********************/
@@ -474,10 +458,8 @@ main{
     position: absolute;
     content: '';
     bottom: 0;
-    right: 1rem;
-    width: 66%;
+    width: 100%;
     height: 5px;
-    background:#664755;
 }
 
 .projects__photo{
@@ -485,7 +467,6 @@ main{
     height: 100%;
     overflow: hidden;
     position: relative;
-    padding: 1rem;
 }
 
 
@@ -494,6 +475,7 @@ main{
        object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 0 0 5px 5px;
 }
 
 .projects__link{
@@ -532,6 +514,10 @@ main{
     position: relative;
 }
 
+.p-digital h1:after{
+    background: #4f403d;
+}
+
 .p-academic{
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -544,10 +530,10 @@ main{
 
 }
 
-.p-academic h1:after,
-.p-other h1:after{
-    left: 1rem;
+.p-academic h1:after{
+    background: #676767;
 }
+
 
 .p-tradition{
     grid-column: 2/-1;
@@ -556,6 +542,10 @@ main{
     grid-row: 6/11;
     position: relative;
 
+}
+
+.p-tradition h1:after{
+    background:#a2877c;
 }
 
 .p-other{
@@ -569,6 +559,9 @@ main{
     position: relative;
 }
 
+.p-other h1:after{
+    background: #b89b6f;
+}
 
 /*************ABOUT BLOCK***********/
 
@@ -589,6 +582,8 @@ main{
     margin-bottom: 2rem;
 }
 
+
+
 .about__photo,
 .about__text{
     width: 100%;
@@ -604,26 +599,41 @@ main{
                 0 4px 4px rgba(0, 0, 0, 0.05), 
                 0 8px 8px rgba(0, 0, 0, 0.12), 
                 0 16px 16px rgba(0, 0, 0, 0.05);
+
 }
 
+.about__photo{
+    position: relative;
+}
+.about__photo:after{
+    position: absolute;
+    content: 'Mary Ogneva';
+    width: 100%;
+    right: 1rem;
+    text-align: right;
+    color: white;
+    font-size: 4rem;
+    font-weight: 900;
+    z-index: 5;
+}
 
 .about__photo img{
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    
 
 }
 
 .about__text{
-    padding: 0 1rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    scrollbar-track-color: transparent;
+    scrollbar-color: #4b4e6d;
+    line-height: 1.5;
 }
 
-.about__text h1{
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 300;
-}
 
 .about__certificate{
     grid-column: 1/-1;
@@ -880,5 +890,198 @@ footer{
     color: black;
     margin-left: 0.2rem;
     position: relative;
+}
+
+@media screen and (max-width: 1100px){
+    html,body{
+        font-size: 15px;
+    }
+    .label__headering{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 990px){
+    html,body{
+        font-size: 14px;
+    }
+    .label__pics{
+        -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .label_pics_cell:first-child{
+        display: none;
+    }
+    .label__headering h1{
+        font-size: 4rem;
+    }
+    .block__title h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 870px){
+    .label__pics{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .label__pics{
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }
+    .label_pics_cell{
+        display: none;
+    }
+    .label_pics_cell:last-child{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px){
+    html,body{
+        font-size: 14px;
+    }
+    .label__maincontent{
+        -ms-grid-rows: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        background-image: url(../imgs/1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+    }
+    .label__about_content{
+        padding: 0;
+        background: transparent;
+        -webkit-box-shadow: 0 0 0 white;
+                box-shadow: 0 0 0 white;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+
+    }
+    .label__headering_body{
+        width: 90%;
+        text-align: center;
+    }
+    .label__headering p{
+        text-align: center;
+    }
+    .label__pics{
+        display: none;
+    }
+    .label__abouttext{
+        display: none;
+    }
+    .btn__mobile-scroll{
+        display: block;
+        font-size: 1.5rem;
+    }
+    .block__title{
+        height: 30vh;
+    }
+    .certificates__body{
+        -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+        padding: 0;
+    }
+    .certificates__item1{
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 6;
+        grid-column: 1/7;
+    }
+    .certificates__item2{
+        grid-column: 7/-1;
+    }
+    .certificates__item3{
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 6;
+        grid-column: 1/7;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        grid-row: 2/3;
+    }
+    .certificates__item4{
+        grid-column: 7/-1;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        grid-row: 2/3;
+    }
+    .certificates__item5{
+        -ms-grid-column: 4;
+        -ms-grid-column-span: 6;
+        grid-column: 4/10;
+        grid-row: 3/-1;
+    }
+    
+
+}
+
+@media screen and (max-width: 728px){
+    .block__title h1{
+        font-size: 3rem;
+
+    }
+    .projects__body{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: auto;
+        width: calc(100% - 2rem);
+        margin: 0 auto;
+    }
+    .projects__cell{
+        margin-bottom: 1rem;
+    }
+    .about__body{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    }
+    .about__photo:after{
+        bottom: 0;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 566px){
+    html,body{
+        font-size: 13px;
+    }
+    .projects__cell{
+        -ms-grid-rows: 100px 1fr;
+        grid-template-rows: 100px 1fr;
+    }
+}
+
+@media screen and (max-width: 518px){
+    .block__title h1{
+        font-size: 2.5rem;
+    }
+    .block__title h3{
+        font-size: 1.5rem;
+    }
+    .projects,
+    .projects__body,
+    .about 
+    {
+        width: 100%;
+    }
+    .projects__photo img,
+    .projects__cell{
+        border-radius: 0;
+    }
 }
 
