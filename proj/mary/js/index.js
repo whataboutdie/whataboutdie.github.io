@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         CertificatesBlock = document.getElementById('block__certificates'),
         CertificatesBlockItems = document.getElementsByClassName('certificates__item'),
         AboutBtn = document.getElementById('btn__scroll-about'),
+        AboutBtn2 = document.getElementById('btn__scroll-about2'),
         AboutBlock = document.getElementById('block__about'),
         ProjectsBtn = document.getElementById('btn__scroll-projects'),
         ProjectsBlock = document.getElementById('block__projects'),
@@ -46,6 +47,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         scrollToSection(AboutBlock);
     });
 
+    AboutBtn2.addEventListener('click', () =>{
+        scrollToSection(AboutBlock);
+    });
+
+
+
     ProjectsBtn.addEventListener('click', () =>{
         scrollToSection(ProjectsBlock);
     });
@@ -53,8 +60,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     CertificatesBtn.addEventListener('click', () =>{
         if (CertificatesBlock.style.display == 'block') {
             CertificatesBlock.style.display = 'none';                    
-            console.log('Its none');               
+            console.log('Its none');
+            CertificatesBtn.innerHTML = 'Show certificates'               
         } else {
+            CertificatesBtn.innerHTML = 'Hide certificates'
             CertificatesBlock.style.display = 'block';
             console.log('Its block');
             for (var i=0; i<CertificatesBlockItems.length; i++) {
@@ -63,7 +72,5 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     });
 
-    function slowDisplayNone(target) {
-        target.style.display = 'none';
-    }
-})
+    
+});
