@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () =>{
         AboutBlock = document.getElementById('block__about'),
         ProjectsBtn = document.getElementById('btn__scroll-projects'),
         ProjectsBlock = document.getElementById('block__projects'),
+        MobileMenuBtn = document.getElementById('mobile_menu-btn'),
+        MobileMenuSpanBtn = document.getElementById('mobile_menu-btn-span'),
         btnToTop = document.getElementById('btn__to-top');
 
     let currentPos,
@@ -42,6 +44,18 @@ document.addEventListener('DOMContentLoaded', () =>{
             behavior: 'smooth'
             }); 
     };
+
+    /*MobileMenuBtn.addEventListener('click' , () =>{
+        if (MobileMenuBtn.classList.add('label__menu-mob-active')) {
+            MobileMenuBtn.classList.remove('label__menu-mob-active');       
+        } else {
+            MobileMenuBtn.classList.add('label__menu-mob-active');
+            
+        }
+        
+        
+    });*/
+
 
     AboutBtn.addEventListener('click', () =>{
         scrollToSection(AboutBlock);
