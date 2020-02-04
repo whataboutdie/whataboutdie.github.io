@@ -957,6 +957,7 @@ footer{
         background-size: cover;
         background-repeat: no-repeat;
         color: white;
+        filter: alpha(opacity=80) black;
     }
     .label__about_content{
         padding: 0;
@@ -966,10 +967,7 @@ footer{
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        -webkit-box-align: end;
-            -ms-flex-align: end;
-                align-items: flex-end;
-
+        align-items: center;
     }
     .label__headering_body{
         width: 90%;
@@ -1086,9 +1084,7 @@ footer{
 @media screen and (max-width: 518px){
     .block__title h1{
         font-size: 2.5rem;
-    }
-    .block__title h3{
-        font-size: 1.5rem;
+        text-align: center;
     }
     .projects,
     .projects__body,
@@ -1104,6 +1100,7 @@ footer{
 
 @media screen and (max-width: 425px){
     .label{
+
         background-image: url(../imgs/1.jpg);
         background-position: center;
         background-size: cover;
@@ -1195,10 +1192,38 @@ footer{
 
 
 
-    /*.label__navigation-mob-body{
+    .label__navigation-mob-body{
         position: absolute;
+        top: 0;
         width: 100%;
-        height: 100%;
-        background: #000;
-    }*/
+        height: 70vh;
+        background: #fff;
+        transform: translateY(-30vh);
+        transition: all 250ms ease;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .label__navigation-mob-body ul{
+        color: black;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 2;
+        text-align: center;
+    }
+    .label__navigation-mob-body ul li{
+
+    }
+
+
+    .label__navigation-mob-body-active{
+        transform: translateY(0vh);
+        opacity: 1;
+
+    }
+
 }

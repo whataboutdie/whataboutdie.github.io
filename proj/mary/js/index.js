@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         CertificatesBlockItems = document.getElementsByClassName('certificates__item'),
         AboutBtn = document.getElementById('btn__scroll-about'),
         AboutBtn2 = document.getElementById('btn__scroll-about2'),
+        AboutMobBtn = document.getElementById('btn__scroll-about-mob'),
+        AboutMobBtn2 = document.getElementById('btn__scroll-about-mob2'),
         AboutBlock = document.getElementById('block__about'),
         ProjectsBtn = document.getElementById('btn__scroll-projects'),
+        ProjectsMobBtn = document.getElementById('btn__scroll-projects-mob'),
         ProjectsBlock = document.getElementById('block__projects'),
-        MobileMenuBtn = document.getElementById('mobile_menu-btn'),
-        MobileMenuSpanBtn = document.getElementById('mobile_menu-btn-span'),
         btnToTop = document.getElementById('btn__to-top');
 
     let currentPos,
@@ -65,7 +66,17 @@ document.addEventListener('DOMContentLoaded', () =>{
         scrollToSection(AboutBlock);
     });
 
+    AboutMobBtn.addEventListener('click', () =>{
+        scrollToSection(AboutBlock);
+    });
+    AboutMobBtn2.addEventListener('click', () =>{
+        scrollToSection(AboutBlock);
+    });
 
+    ProjectsMobBtn.addEventListener('click', () =>{
+        scrollToSection(ProjectsBlock);
+        
+    });
 
     ProjectsBtn.addEventListener('click', () =>{
         scrollToSection(ProjectsBlock);
