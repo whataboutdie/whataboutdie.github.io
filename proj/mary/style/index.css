@@ -1058,9 +1058,15 @@ footer{
         height: auto;
     }
     .about__text{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         font-size: 2rem;
     }
     
@@ -1102,6 +1108,7 @@ footer{
         background-size: cover;
         background-repeat: no-repeat;
         color: white;
+        -ms-grid-rows: 100px 1fr;
         grid-template-rows: 100px 1fr
     }
     .label__maincontent{
@@ -1111,18 +1118,28 @@ footer{
         display: none;
     }
     .label__navigation-mob{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
-        justify-content: flex-start;
-        align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .label__menu-mob{
         width: 50px;
         height: 50px;
         z-index: 5;
         margin-left: 1.5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .label__menu-mob span{
@@ -1139,14 +1156,20 @@ footer{
         width: 100%;
         height: 5px;
         background:white;
+        -webkit-transition: all 250ms ease;
+        -o-transition: all 250ms ease;
         transition: all 250ms ease;
     }
 
     .label__menu-mob span:after{
-        transform: translateY(15px);
+        -webkit-transform: translateY(15px);
+            -ms-transform: translateY(15px);
+                transform: translateY(15px);
     }
     .label__menu-mob span:before{
-        transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+            -ms-transform: translateY(-15px);
+                transform: translateY(-15px);
 
     }
 
@@ -1156,12 +1179,16 @@ footer{
     }
 
     .label__menu-mob-active span:before{
-        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
         background: #000;
     }
 
     .label__menu-mob-active span:after{
-        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
         background: #000;
     }
 
