@@ -96,7 +96,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-100%);
+    transform: translateY(-120%);
     transition: all 250ms ease;
 }
 
