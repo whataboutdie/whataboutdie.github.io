@@ -1,4 +1,15 @@
-$('.label__menu-mob').on('click', function(e){
-    $(this).toggleClass('label__menu-mob-active');
-    $('.label__navigation-mob-body').toggleClass('label__navigation-mob-body-active');
+$('#menu-btn-open').on('click', function(e){
+    $('.label__modal_menu').toggleClass('label__modal_menu-open');
+});
+
+$('#menu-btn-close').on('click', function(e){
+    $('.label__modal_menu').toggleClass('label__modal_menu-open');
+});
+
+$('#btn__scroll-about').on('click', function(e){
+    $('.label__modal_menu').removeClass('label__modal_menu-open');
+});
+
+$('#btn__scroll-projects').on('click', function(e){
+    $('.label__modal_menu').removeClass('label__modal_menu-open');
 });
