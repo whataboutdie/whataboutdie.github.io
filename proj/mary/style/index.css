@@ -125,7 +125,7 @@ p{
 
 .label__menu{
     width: 320px;
-    height: 568px;
+    height: 450px;
     display: grid;
     grid-template-rows: 1fr 50px;
     grid-gap: 1rem;
@@ -173,7 +173,7 @@ p{
 
 .label__text span{
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 3  00;
     font-style: normal;
 }
 
