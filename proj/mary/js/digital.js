@@ -1,9 +1,36 @@
-$('#sheet-list-off').on('click', function(e){
-    $('.sheet__list-off').toggleClass('active__list');
-    $('.sheet__list-on').toggleClass('active__list');
-});
+'use strict';
+document.addEventListener('DOMContentLoaded', () =>{
+    console.log('welcome to my console!');
 
-$('#sheet-list-on').on('click', function(e){
-    $('.sheet__list-off').toggleClass('active__list');
-    $('.sheet__list-on').toggleClass('active__list');
+    let HeaderMovingBtn = document.getElementById('header__button'),
+        SectionSheet = document.getElementById('sheet__body');
+
+    let targetPos,
+        buttonPos;
+
+    window.addEventListener('scroll' , () =>{
+        let scrolled = window.scrollY;
+        console.log(scrolled);
+    });
+
+    /*function scrollToSection(target, button) { //func describes the way it moves down to necessary section(target)
+        targetPos = target.getBoundingClientRect();
+        buttonPos = button.getBoundingClientRect();
+
+        console.log('buttonPos:',  buttonPos);
+        console.log('tragetPos:',  targetPos);
+
+            window.scrollTo({
+            left: targetPos.right,
+            behavior: 'smooth'
+            });
+
+            button.scrollLeft = targetPos;
+    };
+
+    HeaderMovingBtn.addEventListener('click', () =>{
+        scrollToSection(SectionSheet, HeaderMovingBtn);
+    });*/
+
+    
 });

@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="outer-wrapper">
-        <div class="wrapper">
-            <div class="section header">
+    <!--<div class="outer-wrapper">-->
+        <div class="wrapper" data-0="transform: translateX(0%)" data-1000="transform: translateX(-100%)">
+            <div class="section" id="header__body">
                 <div class="header__body">
                     <div class="header__menu">
                         <div class="menu" id="menu-btn-open">
@@ -23,7 +23,7 @@
                                 Digital
                             </div>
                             <div class="header__description">
-                                <div class="header__button">
+                                <div class="header__button" id="header__button">
                                     Lets Get Started!
                                 </div>
                             </div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <!--./header-->
-            <div class="section sheet">
+            <div class="section" id="sheet__body">
                 <div class="sheet__body">
                     <div class="sheet__list-type">
                         <div class="sheet__button-moveback">
@@ -193,9 +193,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!--</div>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./js/digital.js"></script>
     <script src="./js/btn.js"></script>
+    <script src="./js/skrollr.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+    </script>
+
 </body>
 </html>
