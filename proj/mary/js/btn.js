@@ -27,10 +27,4 @@ $(document).ready(function (){
         $('.sheet__list-on').toggleClass('active__list');
     });
 
-    $('#header__button').on('click', function(e) {
-        $('#header__body').addClass('header__disapperaing');
-        $('#sheet__body').toggleClass('header__disapperaing');
-        
-    });
-
 });
