@@ -19,7 +19,6 @@ body, html{
     font-size: 16px;
     color: black;
     overflow: visible !important;
-
 }
 
 *,
@@ -72,9 +71,9 @@ body, html{
 }
 
 
-::-webkit-scrollbar{
+/*::-webkit-scrollbar{
     display: none;
-}
+}*/
 
 /******header********/
 
