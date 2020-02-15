@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         ListOffBtn = document.getElementById('sheet-list-off'),
         ListOnBtn = document.getElementById('sheet-list-on'),
         Wrapper = document.getElementById('wrapper'),
-        SkrollrJs = document.getElementById("skrollr-js");
+        SkrollrJs = document.getElementById("skrollr");
 
     let targetPos;
 
@@ -28,23 +28,24 @@ document.addEventListener('DOMContentLoaded', () =>{
         return mq(query);
     }
 
+    if (is_touch_device() == false) {
+        
+        console.log('false');
 
-    //
-    if (is_touch_device() === true) {
-        console.log('true');
-
-        // Remove the child element from the document
-        SkrollrJs.remove();
-
-
-        Wrapper.classList.remove('wrapper');
-        Wrapper.classList.add('wrapper-touch-true');
+        
 
     } else {
-        console.log('false');
+        console.log('true');
+        Wrapper.classList.add('wrapper-new');
+        Wrapper.classList.remove('wrapper');
+        // Remove the child element from the document
+        SkrollrJs.node.remove();
+
+        
+        
     }
 
-    function scrollToSection(target, button) { //func describes the way it moves down to necessary section(target)
+    function scrollToSection(target) { //func describes the way it moves down to necessary section(target)
         targetPos = target.getBoundingClientRect().right;
         console.log('tragetPos:',  targetPos);
         window.scrollTo({
@@ -67,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         ListOffBtn.classList.toggle('active__list');
         ListOnBtn.classList.toggle('active__list');
     });
+    
 
 
     
