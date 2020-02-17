@@ -8,6 +8,7 @@
 :root{
     --gray: #f5f6fa;
     --light-brown: #f1dac4;
+    --aaa: calc(50% - 2rem);
 }
 
 body, html{
@@ -71,9 +72,9 @@ body, html{
 }
 
 
-/*::-webkit-scrollbar{
+::-webkit-scrollbar{
     display: none;
-}*/
+}
 
 /******header********/
 
@@ -329,7 +330,7 @@ body, html{
 .sheet__body{
     width: 100%;
     height: 100%;
-    background: var(--light-brown);
+    background: var(--gray);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -346,23 +347,6 @@ body, html{
     align-items: center;
 }
 
-
-.sheet__button-moveback{
-    cursor: pointer;
-    width: 200px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 24px;
-    font-weight: 500;
-    background: #fff;
-    margin-right: auto;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
-                0 2px 2px rgba(0, 0, 0, 0.07),
-                0 4px 4px rgba(0, 0, 0, 0.07),
-                0 8px 8px rgba(0, 0, 0, 0.07);
-}
 
 .sheet__list-item{
     width: 75px;
@@ -396,29 +380,23 @@ body, html{
     height: calc(80% - 2rem);
     overflow-y: scroll;
     scrollbar-width: none;
-}
-
-.sheet__cell{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.sheet__content{
-    width: 100%;
-    height: 575px;
     display: grid;
-    grid-template-columns:  /*repeat(auto-fill, minmax(450px, 1fr))*/ 
-                            1fr 1fr ;
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 2rem), 1fr));
     grid-gap: 1rem;
-
 }
 
-
-
-.sheet__block,
-.sheet__block-mob{
+.sheet__list-on-cells {
+    max-width: 1024px;
+    width: calc(100% - 2rem);
+    height: calc(80% - 2rem);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 2rem), 1fr));
+}
+  
+.sheet__block{
     background: #fff;
     width: 100%;
     height: 100%;
@@ -431,23 +409,48 @@ body, html{
                 0 8px 8px rgba(0, 0, 0, 0.07);
 }
 
-.sheet__block-mob{
-    display: none;
+.sheet__block-on-cells{
+    grid-template-rows: 1fr;
+    position: relative;
+    padding-bottom: 100%;
+    width: 100%;
+    height: 0;
+}
+
+.sheet__picture{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.sheet__picture-on-cells{
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 
+.sheet__picture img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: .5rem solid white;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 5px;
+}
 
-
-.sheet__title,
-.sheet__title-mob{
+.sheet__title{
     width: 100%;
     height: 100%;
     padding: 0 .5rem .5rem .5rem;
     display: flex;
 }
 
-.sheet__name,
-.sheet__name-mob{
+.sheet__name{
     width: 100%;
     height: 100%;
     flex: 1;
@@ -457,8 +460,7 @@ body, html{
     align-items: center;
 }
 
-.sheet__button,
-.sheet__button-mob{
+.sheet__button{
     cursor: pointer;
     width: 150px;
     height: 100%;
@@ -483,21 +485,7 @@ body, html{
 
 
 
-.sheet__picture,
-.sheet__picture-mob{
-    width: 100%;
-    height: 100%;
-    padding: .5rem;
-}
 
-.sheet__picture img,
-.sheet__picture-mob img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right;
-    border-radius: 5px;
-}
 
 /*------------------
     global media
@@ -509,36 +497,24 @@ in project-media.css
 }
 
 @media all and (max-width: 768px){
-    .wrapper{
-        position: static;
-        width: 100%;
-        height: 100%;
+    .header__title{
+        font-size: 7rem;
     }
-    
+
     .sheet__list{
         height: calc(100% - 1rem);
         width: calc(90% - 2rem);
-    }
+        grid-template-columns: repeat(1, 1fr);
+    }   
 
     .sheet__list-type{
         width: calc(90% - 2rem);
     }
-
-    .sheet__cell{
-        display: none;
-    }
-
-    .sheet__block-mob{
-        display: grid;
-        max-width: 100%;
-        height: auto;
-        width: 100%;
-        margin: .5rem auto;
-    }
 }
 
 @media all and (max-width: 666px){
-    .sheet__list{
+    .sheet__list,
+    .sheet__list-on-cells{
         height: calc(100% - 1rem);
         width: calc(100% - 2rem);
     }
@@ -550,17 +526,6 @@ in project-media.css
     .sheet__button-moveback{
         display: none;
     }
-
-    .sheet__cell{
-        display: none;
-    }
-    .sheet__block-mob{
-        display: grid;
-        max-width: 100%;
-        height: auto;
-        width: 100%;
-        margin: .5rem auto;
-    }
     
 }
 
@@ -570,7 +535,8 @@ in project-media.css
         padding: 0;
     }
 
-    .sheet__list{
+    .sheet__list,
+    .sheet__list-on-cells{
         height: calc(100% - 1rem);
     }
 

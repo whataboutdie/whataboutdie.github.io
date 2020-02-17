@@ -49,7 +49,12 @@ document.addEventListener('DOMContentLoaded', () =>{
     let HeaderMovingBtn = document.getElementById('header__button'),
         SectionSheet = document.getElementById('sheet__body'),
         ListOffBtn = document.getElementById('sheet-list-off'),
-        ListOnBtn = document.getElementById('sheet-list-on');
+        ListOnBtn = document.getElementById('sheet-list-on'),
+        SheetList = document.getElementById('sheet__list'),
+        SheetBlock = document.getElementsByClassName('sheet__block'),
+        SheetPicture = document.getElementsByClassName('sheet__picture'),
+        SheetPictureImg = document.querySelector('.sheet__picture img'),
+        SheetTitle = document.getElementsByClassName('sheet__title');
 
     let targetPos;
 
@@ -68,12 +73,53 @@ document.addEventListener('DOMContentLoaded', () =>{
     });
 
     ListOffBtn.addEventListener('click', ()=>{
-        ListOffBtn.classList.toggle('active__list');
-        ListOnBtn.classList.toggle('active__list');
+        ListOffBtn.classList.add('active__list');
+        ListOnBtn.classList.remove('active__list');
+        SheetList.classList.add('sheet__list-on-cells');
+        SheetList.classList.remove('sheet__list');
+
+        for (var i=0; i<SheetBlock.length; i++) {
+            SheetBlock[i].classList.add('sheet__block-on-cells');
+        }
+
+        for (var i=0; i<SheetPicture.length; i++) {
+            SheetPicture[i].classList.add('sheet__picture-on-cells');
+            
+        }
+        for (var i=0; i<SheetPictureImg.length; i++) {
+            SheetPictureImg[i].style.position = 'static';
+            SheetPicture[i].style.left = 'none';
+            SheetPicture[i].style.top = 'none';
+        }
+
+        for (var i=0; i<SheetTitle.length; i++) {
+            SheetTitle[i].style.display = 'none';
+        }
     });
 
     ListOnBtn.addEventListener('click', ()=>{
-        ListOffBtn.classList.toggle('active__list');
-        ListOnBtn.classList.toggle('active__list');
+        ListOnBtn.classList.add('active__list');
+        ListOffBtn.classList.remove('active__list');
+        SheetList.classList.remove('sheet__list-on-cells');
+        SheetList.classList.add('sheet__list');
+
+        for (var i=0; i<SheetBlock.length; i++) {
+            SheetBlock[i].classList.remove('sheet__block-on-cells');
+        }
+
+        for (var i=0; i<SheetPicture.length; i++) {
+            SheetPicture[i].classList.remove('sheet__picture-on-cells');
+        }
+
+        for (var i=0; i<SheetPictureImg.length; i++) {
+            SheetPictureImg[i].style.position = 'absolute';
+            SheetPicture[i].style.left = '0';
+            SheetPicture[i].style.top = '0';
+        }
+
+        for (var i=0; i<SheetTitle.length; i++) {
+            SheetTitle[i].style.display = 'flex';
+
+        }
     });
 });
