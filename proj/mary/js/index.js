@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         currentPos = target.getBoundingClientRect().top;
         console.log('currentPos:',  currentPos);
             window.scrollTo({
-            top: currentPos + 100,
+            top: currentPos,
             behavior: 'smooth'
             }); 
     };

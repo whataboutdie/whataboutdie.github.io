@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900&display=swap&subset=cyrillic');
 
+@font-face {
+    font-family: "Athene";
+    src: url("../fonts/AtheneFF/Athene.woff") format("woff");
+   }
 :root{
     --bg-color-grey: #f5f6fa;
 }
@@ -84,25 +88,98 @@ p{
 .label{
     width: 100%;
     height: 100vh;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    background: white;
 }
 
-.label__modal_menu{
+.header__body{
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color-grey);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr;
+    
+}
+
+
+.header__menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    width: 50px;
+    height: 50px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu span{
+    width: 100%;
+    height: 5px;
+    background: #000;
+    position: relative;
+}
+
+.menu span:after,
+.menu span:before{
+    width: 100%;
+    height: 5px;
+    background: #000;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+}
+
+.menu span:before{
+    transform: translateY(-15px);
+}
+
+.menu span:after{
+    transform: translateY(15px);
+}
+
+.link{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+    transition: opacity 250ms;
+    cursor: pointer;
+}
+
+.link:hover{
+    opacity: .7;
+}
+
+.link-current{
+    color: gray;
+}
+
+
+.label__modal_menu{ 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 10;
-    background: rgba(0,0,0, 0.7);
+    background:var(--bg-color-grey);
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translateY(-120%);
     transition: all 250ms ease;
+    overflow-y: hidden;
 }
 
 .label__modal_menu-open{
@@ -121,11 +198,17 @@ p{
 
 .label__menu-list a{
     display: block;
-    margin: 1rem;
+    padding: 1rem;
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+#btn__scroll-about{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+
 }
 
 .label__menu{
@@ -134,82 +217,6 @@ p{
     display: grid;
     grid-template-rows: 1fr 50px;
     grid-gap: 1rem;
-}
-
-.label:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../imgs/1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.5);
-    z-index: -10;
-}
-
-.label__body{
-    max-width: 1024px;
-    width: calc(100% - 2rem);
-    height: 100%;
-    padding: 2rem 0;
-    display: grid;
-    grid-template-rows: 50px 1fr;
-    grid-gap: 1rem;
-    color: white;
-}
-
-.label__menu-btn,
-.label__main{
-    width: 100%;
-    height: 100%;
-
-}
-
-.label__text{
-    max-width: 600px;
-    border-left: 5px solid #2f89fc;
-    padding-left: 5px;
-    margin-bottom: 3rem;
-}
-
-.label__text span{
-    font-size: 3rem;
-    font-weight: 3  00;
-    font-style: normal;
-}
-
-.lable__start{
-    width: 200px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.lable__start span{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 16px 0 rgba(47,137,252,0.40);
-    border-radius: 24px;
-    color: #FFF;
-    background-color: #2f89fc;
-    border-color: #2f89fc;
-    font-weight: 500;
-}
-
-.label__main_body{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .label__button{
@@ -245,17 +252,108 @@ p{
 }
 
 
+.header__main{
+    width: 100%;
+    height: 100%;
+}
+
+.header__text-container{
+    width: calc(100%- 2rem);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.header__title{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 0 2rem 0;
+    /*font-family: "Athene";*/
+    text-shadow:    0 1px 1px rgba(0, 0, 0, 0.07),
+                    0 2px 2px rgba(0, 0, 0, 0.07),
+                    0 4px 4px rgba(0, 0, 0, 0.07),
+                    0 8px 8px rgba(0, 0, 0, 0.07);
+}
+
+
+
+.headering-span{
+    font-size: 6rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.header__pic{
+    margin-left: 1rem;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+}
+
+.header__pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.subheadering-span{
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.header__button{
+    cursor: pointer;
+    width: 200px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    font-weight: 500;
+    background: #f5f6fa;
+    box-shadow:  11px 11px 22px #d0d1d5, 
+             -11px -11px 22px #ffffff;
+}
+
+
+@keyframes floating{
+    0%{
+        transform: translateY(-2.5px);
+    }
+    25%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    75%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-2.5px);
+    }
+}
+
+
 /***********************main*********************/
 
 main{
     width: 100%;
     height: auto;
+    padding: 0 1rem;
     margin-bottom: 20vh;
 }
 
 .block__title{
     width: 100%;
-    height: 50vh;
+    height: 20vh;
+    margin-bottom: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -276,6 +374,7 @@ main{
     margin: 0;
     font-size: 5rem;
     font-weight: 300;
+    text-transform: capitalize;
 }
 
 .block__title h3{
@@ -464,8 +563,8 @@ main{
 /*************ABOUT BLOCK***********/
 
 .about{
-    max-width: 1200px;
-    width: calc(100% - 2rem);
+    width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -475,9 +574,8 @@ main{
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 60vh auto;
-    grid-template-rows: 60vh auto;
-    margin-bottom: 2rem;
+    -ms-grid-rows: 90vh auto;
+    grid-template-rows: 90vh auto;
 }
 
 .about__photo,
@@ -486,45 +584,58 @@ main{
     height: 100%;
 }
 
-.about__photo{
-    position: relative;
-}
-.about__photo:after{
-    position: absolute;
-    content: 'Mary Ogneva';
-    width: 100%;
-    right: 1rem;
-    text-align: right;
-    color: white;
-    font-size: 4rem;
-    font-weight: 900;
-    z-index: 5;
-}
-
 .about__photo img{
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    
+    filter: grayscale(1);
+    transition: all 250ms ease;
+}
+
+.about__photo img:hover{
+    filter: grayscale(0);
 
 }
 
 .about__text{
-    padding: 1rem;
-    line-height: 1.5;
+    padding: 0 2rem;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+}
+
+.about__content span{
+    font-size: 5rem;
     font-weight: 500;
-
+    position: relative;
+    font-family: 'Athene';
+    text-shadow:    0 1px 1px rgba(0, 0, 0, 0.07),
+                    0 2px 2px rgba(0, 0, 0, 0.07),
+                    0 4px 4px rgba(0, 0, 0, 0.07),
+                    0 8px 8px rgba(0, 0, 0, 0.07);
 }
 
-.about__text div{
-    max-width: calc(100% / 1.5);
+.about__content p{
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    padding-top: 1rem;
 }
 
+/*.about__content span:after{
+    content: '';
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    background: lightgray;
+    z-index: -1;
+}*/
 
 .about__certificate{
     grid-column: 1/-1;
@@ -539,15 +650,35 @@ main{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+            
 }
 
-.about__certificate h1{
-    font-size: 2rem;
-    font-weight: 300;
-    color: blue;
+.btn__showblock-certificates{
+    width: 200px;
+    height: 48px;
+    margin: 1.5rem;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow:  14px 14px 28px #d9d9d9, 
+                -14px -14px 28px #ffffff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.07), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.07), 0 8px 8px rgba(0, 0, 0, 0.07);
+    
+}
+
+.btn__showblock-certificates h1{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
     cursor: pointer;
+    align-items: center;
+    
 }
-
 
 
 /************certificates block*************/
@@ -595,7 +726,10 @@ main{
     content: 'описание описание описание описание';
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba(0,0,0,0.5);
     bottom: 0;
     left: 0;
@@ -603,6 +737,7 @@ main{
     font-size: 2rem;
     font-weight: 300;
     padding: .5rem;
+    text-align: center;
     opacity: 0;
     -webkit-transform: translateY(50px);
         -ms-transform: translateY(50px);
