@@ -421,8 +421,6 @@ main{
     
     background:var(--bg-color-grey);
     border-radius: 5px;
-    -webkit-box-shadow: 0 0 0 white;
-            box-shadow: 0 0 0 white;
     -webkit-transition: -webkit-box-shadow 250ms ease;
     transition: -webkit-box-shadow 250ms ease;
     -o-transition: box-shadow 250ms ease;
