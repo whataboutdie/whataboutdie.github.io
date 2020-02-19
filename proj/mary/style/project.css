@@ -29,9 +29,15 @@ body, html{
             box-sizing: border-box;
 }
 
-.section{
+.section:first-child{
     min-width: 100%;
     height: 100vh;
+    padding: 1rem;
+}
+
+.section:last-child{
+    min-width: 100%;
+    height: auto;
     padding: 1rem;
 }
 
@@ -475,6 +481,7 @@ body, html{
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    align-items: center;
 }
 
 .sheet__list-item{
@@ -520,7 +527,7 @@ body, html{
 .sheet__list{
     max-width: 1024px;
     width: calc(100% - 2rem);
-    height: 80vh;
+    height: auto;
     margin: 0 auto;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -542,7 +549,7 @@ body, html{
     max-width: 1024px;
     margin: 0 auto;
     width: calc(100% - 2rem);
-    height: 80vh;
+    height: auto;
     overflow-y: scroll;
     scrollbar-width: none;
     display: -ms-grid;
@@ -693,24 +700,16 @@ in project-media.css
 ------------------*/
 
 @media all and (max-width: 1024px){
-    .sheet__body{
-        width: 100%;
-        height: auto;
-        background: var(--gray);
-    }
-    #sheet__body{
-        background: var(--gray);
-
-    }
-    .sheet__list-on-cells,
-    .sheet__list{
-        height: auto;
-    }
 }
 
 @media all and (max-width: 768px){
     .header__title{
         font-size: 7rem;
+    }
+
+    .sheet__list-item{
+        width: 60px;
+        height: 60px;
     }
 
     .sheet__list{
@@ -781,5 +780,15 @@ in project-media.css
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 360px){
+    .sheet__list-item{
+        width: 50px;
+        height: 50px;
     }
 }

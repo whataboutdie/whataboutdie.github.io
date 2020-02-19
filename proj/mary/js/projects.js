@@ -4,7 +4,7 @@
 // however, i should say thanks for capability of using free touch screen detector was made by https://twitter.com/modernizr !   
 
 
-let Wrapper = document.getElementById('wrapper');
+/*let Wrapper = document.getElementById('wrapper');
 
 
 function is_touch_device() {
@@ -40,7 +40,7 @@ if (is_touch_device() === false) {
     
 
 }
-
+*/
 // when DOM`s finally loaded:
 
 document.addEventListener('DOMContentLoaded', () =>{
