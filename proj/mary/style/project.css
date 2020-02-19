@@ -62,6 +62,8 @@ body, html{
     top: 0;
     left: 0;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -82,8 +84,11 @@ body, html{
     width: 100%;
     height: 100%;
     background: var(--gray);
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: 75px 1fr;
     grid-template-rows: 75px 1fr;
     
 }
@@ -109,8 +114,12 @@ body, html{
 }*/
 
 .header__menu{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .menu{
@@ -118,8 +127,12 @@ body, html{
     height: 50px;
     margin-left: 1rem;
     margin-right: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
 }
 
@@ -142,11 +155,15 @@ body, html{
 }
 
 .menu span:before{
-    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+            transform: translateY(-15px);
 }
 
 .menu span:after{
-    transform: translateY(15px);
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+            transform: translateY(15px);
 }
 
 .link{
@@ -154,6 +171,8 @@ body, html{
     margin-right: 1rem;
     text-decoration: none;
     color: black;
+    -webkit-transition: opacity 250ms;
+    -o-transition: opacity 250ms;
     transition: opacity 250ms;
     cursor: pointer;
 }
@@ -176,26 +195,47 @@ body, html{
     z-index: 1000;
     overflow: hidden;
     background:var(--gray);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-120%);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(-120%);
+        -ms-transform: translateY(-120%);
+            transform: translateY(-120%);
+    -webkit-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
     transition: all 250ms ease;
     overflow-y: hidden;
 }
 
 .label__modal_menu-open{
-    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
 
 }
 
 .label__menu-list{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .label__menu-list a{
@@ -216,7 +256,9 @@ body, html{
 .label__menu{
     width: 320px;
     height: 450px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 50px;
     grid-template-rows: 1fr 50px;
     grid-gap: 1rem;
 }
@@ -224,16 +266,26 @@ body, html{
 .label__button{
     width: 75px;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
     transition: all 250ms ease;
     cursor: pointer;
 }
 
 
 .label__button:hover{
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .label__button-open{
@@ -263,7 +315,9 @@ body, html{
     width: calc(100%- 2rem);
     height: 100%;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 
 }
@@ -275,9 +329,15 @@ body, html{
     font-size: 10rem;
     font-weight: 300;
     font-family: "Athene";
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-shadow:    0 1px 1px rgba(0, 0, 0, 0.07),
                     0 2px 2px rgba(0, 0, 0, 0.07),
                     0 4px 4px rgba(0, 0, 0, 0.07),
@@ -291,45 +351,92 @@ body, html{
     background-repeat: no-repeat;
     background-size: 85% auto;
     background-position: top center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 .header__button{
     cursor: pointer;
     width: 200px;
     height: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 24px;
     font-weight: 500;
     background: #f5f6fa;
     margin-bottom: 25%;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
                 0 2px 2px rgba(0, 0, 0, 0.07),
                 0 4px 4px rgba(0, 0, 0, 0.07),
                 0 8px 8px rgba(0, 0, 0, 0.07);
-    animation: floating 1500ms linear 0s infinite normal none;
-    transform: translateY(0);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
+                0 2px 2px rgba(0, 0, 0, 0.07),
+                0 4px 4px rgba(0, 0, 0, 0.07),
+                0 8px 8px rgba(0, 0, 0, 0.07);
+    -webkit-animation: floating 1500ms linear 0s infinite normal none;
+            animation: floating 1500ms linear 0s infinite normal none;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+}
+
+@-webkit-keyframes floating{
+    0%{
+        -webkit-transform: translateY(-2.5px);
+                transform: translateY(-2.5px);
+    }
+    25%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    50%{
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px);
+    }
+    75%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    100%{
+        -webkit-transform: translateY(-2.5px);
+                transform: translateY(-2.5px);
+    }
 }
 
 @keyframes floating{
     0%{
-        transform: translateY(-2.5px);
+        -webkit-transform: translateY(-2.5px);
+                transform: translateY(-2.5px);
     }
     25%{
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
     50%{
-        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px);
     }
     75%{
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
     100%{
-        transform: translateY(-2.5px);
+        -webkit-transform: translateY(-2.5px);
+                transform: translateY(-2.5px);
     }
 }
 
@@ -350,16 +457,24 @@ body, html{
     width: calc(100% - 2rem);
     max-width: 1024px;
     height: 15vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
 }
 
 .sheet__list-type-wrap{
     width: 100%;
     height: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .sheet__list-item{
@@ -368,10 +483,19 @@ body, html{
     margin: 0 1rem;
     cursor: pointer;
     border-radius: 20px;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 }
 
@@ -382,7 +506,9 @@ body, html{
 
 .active__list{ /*active chosen */
     background: #f5f6fa;
-    box-shadow:  11px 11px 22px #d0d1d5, 
+    -webkit-box-shadow:  11px 11px 22px #d0d1d5, 
+             -11px -11px 22px #ffffff;
+            box-shadow:  11px 11px 22px #d0d1d5, 
              -11px -11px 22px #ffffff;
              cursor: pointer;
     
@@ -398,10 +524,13 @@ body, html{
     margin: 0 auto;
     overflow-y: scroll;
     scrollbar-width: none;
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(calc(50% - 2rem), 1fr));
     grid-gap: 1rem;
     padding: 1rem;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
     border-radius: 40px;
 
@@ -416,6 +545,7 @@ body, html{
     height: 80vh;
     overflow-y: scroll;
     scrollbar-width: none;
+    display: -ms-grid;
     display: grid;
     grid-gap: 1rem;
 
@@ -426,18 +556,27 @@ body, html{
     background: #fff;
     width: 100%;
     height: 100%;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 75px;
     grid-template-rows: 1fr 75px;
     border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
+                 0 2px 2px rgba(0, 0, 0, 0.07),
+                0 4px 4px rgba(0, 0, 0, 0.07),
+                0 8px 8px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
                  0 2px 2px rgba(0, 0, 0, 0.07),
                 0 4px 4px rgba(0, 0, 0, 0.07),
                 0 8px 8px rgba(0, 0, 0, 0.07);
     cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 }
 
 .sheet__block-on-cells{
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     position: relative;
     padding-bottom: 100%;
@@ -452,6 +591,8 @@ body, html{
     height: 100%;
     position: relative;
     padding-bottom: 100%;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 
 }
@@ -460,6 +601,8 @@ body, html{
     position: absolute;
     left: 0;
     top: 0;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 
 }
@@ -472,8 +615,10 @@ body, html{
     border: .5rem solid white;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: right;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: right;
+       object-position: right;
     border-radius: 5px;
 }
 
@@ -481,17 +626,27 @@ body, html{
     width: 100%;
     height: 100%;
     padding: 0 .5rem .5rem .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .sheet__name{
     width: 100%;
     height: 100%;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     font-size: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .sheet__button{
@@ -499,15 +654,25 @@ body, html{
     width: 150px;
     height: 100%;
     border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
+                0 2px 2px rgba(0, 0, 0, 0.07),
+                0 4px 4px rgba(0, 0, 0, 0.07),
+                0 8px 8px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07),
                 0 2px 2px rgba(0, 0, 0, 0.07),
                 0 4px 4px rgba(0, 0, 0, 0.07),
                 0 8px 8px rgba(0, 0, 0, 0.07);
     background-color: var(--light-brown);
     border-color: #2f89fc;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: white;
     font-size: 1.5rem;
     text-transform: capitalize;
@@ -551,6 +716,7 @@ in project-media.css
     .sheet__list{
         height: calc(100% - 1rem);
         width: calc(90% - 2rem);
+        -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     }   
 
@@ -560,6 +726,8 @@ in project-media.css
     }
 
     .sheet__block{
+        -webkit-transition: none;
+        -o-transition: none;
         transition: none;
     }
 
@@ -591,6 +759,7 @@ in project-media.css
     }
 
     .sheet__block{
+        -ms-grid-rows: 1fr 50px;
         grid-template-rows: 1fr 50px;
     }
 
@@ -609,6 +778,8 @@ in project-media.css
     }
 
     .header__description{
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 }

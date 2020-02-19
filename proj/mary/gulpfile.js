@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 
 function Autoprefixer(done) {
-    gulp.src('./style/index.css')
+    gulp.src('./style/*.css')
         .pipe(autoprefixer({
             cascade: true,
             grid: true,
@@ -18,7 +18,7 @@ function GulpOn(done) {
 }
 
 function watchAutoprefixer(done) {
-    gulp.watch('./style/index.css', Autoprefixer)
+    gulp.watch('./style/*.css', Autoprefixer)
     done();
 }
 
