@@ -58,6 +58,31 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     let targetPos;
 
+    const   StylePictureName = document.getElementById('picture-typeofproj-name'),
+            StylePictureName2 = document.getElementById('picture-typeofproj2-name');
+
+    StylePictureName.addEventListener('click', ()=>{openModalProj(StylePictureName);});
+    StylePictureName2.addEventListener('click', ()=>{openModalProj(StylePictureName2);});
+    
+    function openModalProj(el) {
+        let modalWindow = el.dataset.projmodal;
+        console.log('modalWindow: ', modalWindow);
+        document.getElementById(`${modalWindow}`).classList.toggle('project__modal-open');
+        
+        window.addEventListener('keydown', (event)=>{
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                document.getElementById(`${modalWindow}`).classList.remove('project__modal-open');
+            }
+            else{
+                alert('you sick!');
+            }
+        });
+        
+    }
+
+    
+
     function scrollToSection(target) { //func describes the way it moves down to necessary section(target)
         targetPos = target.getBoundingClientRect().right;
         console.log('tragetPos:',  targetPos);
@@ -65,11 +90,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         top: targetPos,
         behavior: 'smooth'
         });
-
     };
 
+    
+
     HeaderMovingBtn.addEventListener('click', () =>{
-        scrollToSection(SectionSheet, HeaderMovingBtn);
+        scrollToSection(SectionSheet);
     });
 
     ListOffBtn.addEventListener('click', ()=>{
